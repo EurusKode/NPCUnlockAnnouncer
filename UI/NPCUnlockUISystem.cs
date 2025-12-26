@@ -10,10 +10,8 @@ namespace NPCUnlockAnnouncer.UI
         public static NPCUnlockUISystem Instance;
 
         private UserInterface userInterface;
-        private NPCUnlockUI unlockUI;
-
-        private int displayTimer;
-        private const int DisplayTime = 300; // 5 seconds
+        private NPCUnlockUI ui;
+        private NPCUnlockAnimator animator;
 
         public override void Load()
         {
@@ -22,33 +20,35 @@ namespace NPCUnlockAnnouncer.UI
 
             Instance = this;
 
-            unlockUI = new NPCUnlockUI();
-            unlockUI.Activate();
+            ui = new NPCUnlockUI();
+            ui.Activate();
+
+            animator = new NPCUnlockAnimator();
 
             userInterface = new UserInterface();
-            userInterface.SetState(null);
         }
 
         public override void UpdateUI(GameTime gameTime)
         {
-            if (displayTimer > 0)
-            {
-                displayTimer--;
-                userInterface?.Update(gameTime);
-            }
+            if (!animator.IsVisible)
+                return;
+
+            animator.Update();
+            ui.Banner.Top.Set(animator.CurrentY, 0f);
+            userInterface.Update(gameTime);
         }
 
         public override void ModifyInterfaceLayers(System.Collections.Generic.List<GameInterfaceLayer> layers)
         {
-            if (displayTimer <= 0 || userInterface?.CurrentState == null)
+            if (!animator.IsVisible)
                 return;
 
-            int index = layers.FindIndex(layer => layer.Name.Equals("Vanilla: Mouse Text"));
+            int index = layers.FindIndex(l => l.Name.Equals("Vanilla: Mouse Text"));
             if (index != -1)
             {
                 layers.Insert(index, new LegacyGameInterfaceLayer(
-                    "NPCUnlockAnnouncer: NPC Unlock UI",
-                    delegate
+                    "NPCUnlockAnnouncer: Animated Banner",
+                    () =>
                     {
                         userInterface.Draw(Main.spriteBatch, new GameTime());
                         return true;
@@ -58,14 +58,11 @@ namespace NPCUnlockAnnouncer.UI
             }
         }
 
-        /// <summary>
-        /// Shows the unlock UI for a specific NPC.
-        /// </summary>
-        public void ShowNPCUnlock(int npcType, string title, string lore)
+        public void ShowNPCUnlock(int npcType, string title, string subtitle)
         {
-            unlockUI.SetNPCInfo(npcType, title, lore);
-            userInterface.SetState(unlockUI);
-            displayTimer = DisplayTime;
+            ui.SetContent(npcType, title, subtitle);
+            userInterface.SetState(ui);
+            animator.Start();
         }
     }
 }
