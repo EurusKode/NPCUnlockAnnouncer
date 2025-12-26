@@ -2,15 +2,13 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.UI;
-using NPCUnlockAnnouncer.Systems;
 
 namespace NPCUnlockAnnouncer.UI
 {
-    /// <summary>
-    /// Manages when the NPC unlock UI is shown.
-    /// </summary>
     public class NPCUnlockUISystem : ModSystem
     {
+        public static NPCUnlockUISystem Instance;
+
         private UserInterface userInterface;
         private NPCUnlockUI unlockUI;
 
@@ -19,13 +17,16 @@ namespace NPCUnlockAnnouncer.UI
 
         public override void Load()
         {
-            if (!Main.dedServ)
-            {
-                unlockUI = new NPCUnlockUI();
-                unlockUI.Activate();
+            if (Main.dedServ)
+                return;
 
-                userInterface = new UserInterface();
-            }
+            Instance = this;
+
+            unlockUI = new NPCUnlockUI();
+            unlockUI.Activate();
+
+            userInterface = new UserInterface();
+            userInterface.SetState(null);
         }
 
         public override void UpdateUI(GameTime gameTime)
@@ -39,9 +40,11 @@ namespace NPCUnlockAnnouncer.UI
 
         public override void ModifyInterfaceLayers(System.Collections.Generic.List<GameInterfaceLayer> layers)
         {
-            int index = layers.FindIndex(layer => layer.Name.Equals("Vanilla: Mouse Text"));
+            if (displayTimer <= 0 || userInterface?.CurrentState == null)
+                return;
 
-            if (index != -1 && displayTimer > 0)
+            int index = layers.FindIndex(layer => layer.Name.Equals("Vanilla: Mouse Text"));
+            if (index != -1)
             {
                 layers.Insert(index, new LegacyGameInterfaceLayer(
                     "NPCUnlockAnnouncer: NPC Unlock UI",
@@ -50,17 +53,17 @@ namespace NPCUnlockAnnouncer.UI
                         userInterface.Draw(Main.spriteBatch, new GameTime());
                         return true;
                     },
-                    InterfaceScaleType.UI)
-                );
+                    InterfaceScaleType.UI
+                ));
             }
         }
 
         /// <summary>
         /// Shows the unlock UI for a specific NPC.
         /// </summary>
-        public void ShowNPCUnlock(int npcType, string npcName, string lore)
+        public void ShowNPCUnlock(int npcType, string title, string lore)
         {
-            unlockUI.SetNPCInfo(npcType, npcName, lore);
+            unlockUI.SetNPCInfo(npcType, title, lore);
             userInterface.SetState(unlockUI);
             displayTimer = DisplayTime;
         }
