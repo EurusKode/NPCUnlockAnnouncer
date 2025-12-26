@@ -8,15 +8,15 @@ namespace NPCUnlockAnnouncer.CensusIntegration
 {
     /// <summary>
     /// Uses Census to detect when Town NPCs are officially unlocked.
-    /// Returns the NPC key when a new unlock is detected.
+    /// Returns the npcType and npcKey when a new unlock is detected.
     /// </summary>
     public static class CensusUnlockProvider
     {
         /// <summary>
         /// Checks for newly unlocked NPCs.
-        /// Returns the npcKey (ModName/NPCName) if one is unlocked, otherwise null.
+        /// Returns (npcType, npcKey) if one is unlocked, otherwise null.
         /// </summary>
-        public static string CheckForNewUnlocks()
+        public static (int npcType, string npcKey)? CheckForNewUnlocks()
         {
             Mod census = ModLoader.GetMod("Census");
             if (census == null)
@@ -32,11 +32,11 @@ namespace NPCUnlockAnnouncer.CensusIntegration
 
                 string npcKey = GetNPCKey(npcType);
 
-                // Skip if already handled
+                // Skip if already announced
                 if (WorldUnlockData.IsNPCUnlocked(npcKey))
                     continue;
 
-                // Ask Census
+                // Ask Census about unlock state
                 object result = census.Call("TownNPCUnlocked", npcType);
 
                 bool unlocked = false;
@@ -53,13 +53,17 @@ namespace NPCUnlockAnnouncer.CensusIntegration
                 if (unlocked)
                 {
                     WorldUnlockData.MarkNPCUnlocked(npcKey);
-                    return npcKey; // 👈 CLAVE: devolvemos el NPC desbloqueado
+
+                    return (npcType, npcKey);
                 }
             }
 
             return null;
         }
 
+        /// <summary>
+        /// Builds a unique NPC key in the format ModName/NPCName.
+        /// </summary>
         private static string GetNPCKey(int npcType)
         {
             ModNPC modNpc = ModContent.GetModNPC(npcType);

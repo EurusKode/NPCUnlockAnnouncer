@@ -3,7 +3,6 @@ using Terraria.ModLoader;
 using NPCUnlockAnnouncer.CensusIntegration;
 using NPCUnlockAnnouncer.UI;
 using NPCUnlockAnnouncer.Data;
-using Terraria.ID;
 
 namespace NPCUnlockAnnouncer.Systems
 {
@@ -29,19 +28,18 @@ namespace NPCUnlockAnnouncer.Systems
             {
                 tickCounter = 0;
 
-                // 👇 AHORA SÍ RECIBIMOS EL NPC DESBLOQUEADO
-                string unlockedNpcKey = CensusUnlockProvider.CheckForNewUnlocks();
 
-                if (unlockedNpcKey != null)
+                var unlockResult = CensusUnlockProvider.CheckForNewUnlocks();
+
+                if (unlockResult.HasValue)
                 {
-                    // Obtener lore (o fallback)
-                    LoreEntry lore = LoreDatabase.GetLore(unlockedNpcKey);
+                    int npcType = unlockResult.Value.npcType;
+                    string npcKey = unlockResult.Value.npcKey;
 
-                    // Obtener npcType desde la clave
-                    string npcName = unlockedNpcKey.Split('/')[1];
-                    int npcType = NPCID.Search.GetId(npcName);
+                    // Get lore (or fallback)
+                    LoreEntry lore = LoreDatabase.GetLore(npcKey);
 
-                    // Mostrar UI
+                    // Show UI notification
                     NPCUnlockUISystem uiSystem = ModContent.GetInstance<NPCUnlockUISystem>();
                     uiSystem.ShowNPCUnlock(
                         npcType,
