@@ -1,1 +1,2 @@
-Modify this file with a description of your mod.
+Adds stylish RPG-style banners whenever a Town NPC arrives. Includes custom subtitles and queue system.
+Añade carteles elegantes estilo RPG cuando llega un NPC al pueblo. Incluye subtítulos y sistema de cola.

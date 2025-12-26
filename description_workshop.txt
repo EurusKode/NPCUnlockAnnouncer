@@ -1,1 +1,37 @@
-This description will show up on the steam page, check out https://steamcommunity.com/comment/Guide/formattinghelp.
+[h1]NPC Unlock Announcer[/h1]
+[b]Never miss a new villager again![/b]
+
+Did the Merchant arrive while you were fighting a boss? Did you miss the chat message? Not anymore!
+This mod adds a stylish, RPG-style announcement banner whenever a Town NPC (or town pet) arrives in your world.
+
+[h2]Features[/h2]
+[list]
+[*] [b]Stylish Announcements:[/b] A golden banner appears at the top of the screen with the NPC's icon.
+[*] [b]Unique Subtitles:[/b] Every Vanilla NPC has a custom, witty subtitle (English & Spanish).
+[*] [b]Mod Compatibility:[/b] Works with modded NPCs (displays a generic "New Ally" message or uses their name).
+[*] [b]Visuals:[/b] Clean, vanilla-friendly UI that fits perfectly with Terraria's aesthetic.
+[/list]
+
+[h2]🌎 Languages[/h2]
+[list]
+[*] English (US)
+[*] Español (ES)
+[/list]
+
+[hr][/hr]
+
+[h1]Alerta de NPCs (NPC Unlock Announcer)[/h1]
+[b]¡Nunca más te pierdas la llegada de un aldeano![/b]
+
+¿Llegó el Mercader mientras peleabas con un jefe? ¿Se te pasó el mensaje en el chat? ¡Ya no más!
+Este mod añade un elegante cartel tipo RPG cada vez que un NPC del pueblo (o mascota) llega a tu mundo.
+
+[h2]Características[/h2]
+[list]
+[*] [b]Anuncios Elegantes:[/b] Un cartel dorado aparece en la parte superior con el ícono del NPC.
+[*] [b]Subtítulos Únicos:[/b] Cada NPC original tiene un título y subtítulo divertido y personalizado.
+[*] [b]Compatible con Mods:[/b] Funciona con NPCs de otros mods (mostrando un mensaje genérico de bienvenida).
+[*] [b]Estilo Visual:[/b] Una interfaz limpia que encaja perfectamente con la estética de Terraria.
+[/list]
+
+[i]Developed for tModLoader 1.4.4+[/i]
