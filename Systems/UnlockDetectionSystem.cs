@@ -1,50 +1,62 @@
 using Terraria;
 using Terraria.ModLoader;
 using NPCUnlockAnnouncer.CensusIntegration;
+using NPCUnlockAnnouncer.UI;
+using NPCUnlockAnnouncer.Data;
+using Terraria.ID;
 
 namespace NPCUnlockAnnouncer.Systems
 {
     /// <summary>
-    /// Periodically checks for newly unlocked NPCs using Census.
+    /// Periodically checks for newly unlocked NPCs using Census
+    /// and triggers the UI notification.
     /// </summary>
     public class UnlockDetectionSystem : ModSystem
     {
-        // How often we check for new unlocks (in ticks)
         // 60 ticks = 1 second
         private const int CheckInterval = 300; // 5 seconds
 
         private int tickCounter;
 
-        /// <summary>
-        /// Called every game tick.
-        /// </summary>
         public override void PostUpdateWorld()
         {
-            // Do nothing if no world is loaded
-            if (!Main.gameMenu)
+            if (Main.gameMenu)
+                return;
+
+            tickCounter++;
+
+            if (tickCounter >= CheckInterval)
             {
-                tickCounter++;
+                tickCounter = 0;
 
-                if (tickCounter >= CheckInterval)
+                // 👇 AHORA SÍ RECIBIMOS EL NPC DESBLOQUEADO
+                string unlockedNpcKey = CensusUnlockProvider.CheckForNewUnlocks();
+
+                if (unlockedNpcKey != null)
                 {
-                    tickCounter = 0;
+                    // Obtener lore (o fallback)
+                    LoreEntry lore = LoreDatabase.GetLore(unlockedNpcKey);
 
-                    CensusUnlockProvider.CheckForNewUnlocks();
+                    // Obtener npcType desde la clave
+                    string npcName = unlockedNpcKey.Split('/')[1];
+                    int npcType = NPCID.Search.GetId(npcName);
+
+                    // Mostrar UI
+                    NPCUnlockUISystem uiSystem = ModContent.GetInstance<NPCUnlockUISystem>();
+                    uiSystem.ShowNPCUnlock(
+                        npcType,
+                        lore.title,
+                        lore.lore
+                    );
                 }
             }
         }
 
-        /// <summary>
-        /// Reset counter when entering a world.
-        /// </summary>
         public override void OnWorldLoad()
         {
             tickCounter = 0;
         }
 
-        /// <summary>
-        /// Reset counter when leaving a world.
-        /// </summary>
         public override void OnWorldUnload()
         {
             tickCounter = 0;
