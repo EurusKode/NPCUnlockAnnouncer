@@ -3,6 +3,7 @@ using Terraria.ModLoader;
 using NPCUnlockAnnouncer.CensusIntegration;
 using NPCUnlockAnnouncer.UI;
 using NPCUnlockAnnouncer.Data;
+using Terraria.ID;
 
 namespace NPCUnlockAnnouncer.Systems
 {
@@ -40,12 +41,16 @@ namespace NPCUnlockAnnouncer.Systems
                     // Get lore (or fallback)
                     LoreEntry lore = LoreDatabase.GetLore(npcKey);
 
-                    // Use the UI singleton instance, not ModContent.GetInstance
+                // UI must only be shown on the client
+                if (Main.netMode != NetmodeID.Server)
+                {
                     NPCUnlockUISystem.Instance?.ShowNPCUnlock(
                         npcType,
                         lore.title,
                         lore.lore
                     );
+                }
+
                 }
             }
         }
