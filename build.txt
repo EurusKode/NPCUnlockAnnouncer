@@ -1,0 +1,4 @@
+displayName = NPC Unlock Announcer
+author = EurusK
+version = 0.1
+ModReferences = Census
