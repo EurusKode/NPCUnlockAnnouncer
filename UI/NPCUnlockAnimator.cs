@@ -15,16 +15,19 @@ namespace NPCUnlockAnnouncer.UI
         public BannerState State { get; private set; } = BannerState.Hidden;
 
         private const int EnterDuration = 20;
-        private const int ShowDuration = 180;
+        private const int ShowDuration = 300; // <--- CAMBIO: 300 ticks = 5 segundos
         private const int ExitDuration = 20;
 
         private int timer;
         private float progress;
 
+        // Ajusté un poco las alturas para que se vea mejor
+        private readonly float hiddenY = -100f; 
+        private readonly float visibleY = 30f;
+
         public float CurrentY { get; private set; }
 
-        private readonly float hiddenY = -80f;
-        private readonly float visibleY = 20f;
+        public bool IsActive => State != BannerState.Hidden;
 
         public void Start()
         {
@@ -39,6 +42,8 @@ namespace NPCUnlockAnnouncer.UI
                 case BannerState.Entering:
                     timer++;
                     progress = timer / (float)EnterDuration;
+                    // Efecto SmoothStep para una entrada más suave
+                    progress = MathHelper.SmoothStep(0, 1, progress); 
                     CurrentY = MathHelper.Lerp(hiddenY, visibleY, progress);
 
                     if (timer >= EnterDuration)
@@ -62,6 +67,7 @@ namespace NPCUnlockAnnouncer.UI
                 case BannerState.Exiting:
                     timer++;
                     progress = timer / (float)ExitDuration;
+                    progress = MathHelper.SmoothStep(0, 1, progress);
                     CurrentY = MathHelper.Lerp(visibleY, hiddenY, progress);
 
                     if (timer >= ExitDuration)
@@ -71,7 +77,5 @@ namespace NPCUnlockAnnouncer.UI
                     break;
             }
         }
-
-        public bool IsVisible => State != BannerState.Hidden;
     }
 }

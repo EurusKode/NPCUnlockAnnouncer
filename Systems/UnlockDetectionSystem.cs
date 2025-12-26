@@ -1,68 +1,65 @@
+using System.Collections.Generic;
 using Terraria;
 using Terraria.ModLoader;
-using NPCUnlockAnnouncer.CensusIntegration;
-using NPCUnlockAnnouncer.UI;
-using NPCUnlockAnnouncer.Data;
 using Terraria.ID;
+using NPCUnlockAnnouncer.UI; 
+using NPCUnlockAnnouncer.Data; // Importante para LoreDatabase
 
 namespace NPCUnlockAnnouncer.Systems
 {
-    /// <summary>
-    /// Periodically checks for newly unlocked NPCs using Census
-    /// and triggers the UI notification.
-    /// </summary>
     public class UnlockDetectionSystem : ModSystem
     {
-        // 60 ticks = 1 second
-        private const int CheckInterval = 300; // 5 seconds
+        private HashSet<int> _unlockedNPCs = new HashSet<int>();
+        private bool _isInitialized = false;
 
-        private int tickCounter;
-
-        public override void PostUpdateWorld()
+        public override void OnWorldLoad()
         {
-            // Do nothing while in main menu
-            if (Main.gameMenu)
-                return;
+            _unlockedNPCs.Clear();
+            _isInitialized = false;
+        }
 
-            tickCounter++;
-
-            if (tickCounter >= CheckInterval)
+        public override void PostUpdateNPCs()
+        {
+            // Inicialización: Llenar lista con NPCs que ya estaban al entrar al mundo
+            if (!_isInitialized)
             {
-                tickCounter = 0;
-
-                // Check Census for a newly unlocked NPC
-                var unlockResult = CensusUnlockProvider.CheckForNewUnlocks();
-
-                if (unlockResult.HasValue)
+                for (int i = 0; i < Main.maxNPCs; i++)
                 {
-                    int npcType = unlockResult.Value.npcType;
-                    string npcKey = unlockResult.Value.npcKey;
-
-                    // Get lore (or fallback)
-                    LoreEntry lore = LoreDatabase.GetLore(npcKey);
-
-                // UI must only be shown on the client
-                if (Main.netMode != NetmodeID.Server)
-                {
-                    NPCUnlockUISystem.Instance?.ShowNPCUnlock(
-                        npcType,
-                        lore.title,
-                        lore.lore
-                    );
+                    if (Main.npc[i].active && Main.npc[i].townNPC)
+                    {
+                        _unlockedNPCs.Add(Main.npc[i].type);
+                    }
                 }
+                _isInitialized = true;
+                return;
+            }
 
+            // Detección en tiempo real
+            for (int i = 0; i < Main.maxNPCs; i++)
+            {
+                NPC npc = Main.npc[i];
+
+                if (npc.active && npc.townNPC && !_unlockedNPCs.Contains(npc.type))
+                {
+                    _unlockedNPCs.Add(npc.type);
+                    TriggerUnlockAnimation(npc);
                 }
             }
         }
 
-        public override void OnWorldLoad()
+        private void TriggerUnlockAnimation(NPC npc)
         {
-            tickCounter = 0;
-        }
+            // 1. Obtenemos los datos del Lore usando el ID
+            LoreEntry datos = LoreDatabase.GetLore(npc.type);
 
-        public override void OnWorldUnload()
-        {
-            tickCounter = 0;
+            // 2. Llamamos al sistema de UI
+            // Nota: Usamos 'Instance' si lo definiste como static en NPCUnlockUISystem,
+            // o ModContent.GetInstance si no. Tu código actual usa Instance.
+            if (NPCUnlockUISystem.Instance != null)
+            {
+                // Pasamos ID, Título y Lore (Subtítulo)
+                NPCUnlockUISystem.Instance.ShowNPCUnlock(npc.type, datos.title, datos.lore);
+            }
         }
     }
 }
