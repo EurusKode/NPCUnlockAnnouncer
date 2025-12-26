@@ -1,13 +1,12 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
+using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace NPCUnlockAnnouncer.Data
 {
-    /// <summary>
-    /// Loads and provides lore data for NPCs from npc_lore.json.
-    /// </summary>
     public static class LoreDatabase
     {
         private static Dictionary<string, LoreEntry> loreData;
@@ -15,30 +14,45 @@ namespace NPCUnlockAnnouncer.Data
         public static void Load(Mod mod)
         {
             loreData = new Dictionary<string, LoreEntry>();
-
             try
             {
-                // Correct way to read files packaged inside a tModLoader mod
                 using Stream stream = mod.GetFileStream("Data/npc_lore.json");
                 using StreamReader reader = new StreamReader(stream);
-
                 string json = reader.ReadToEnd();
-
                 loreData = JsonSerializer.Deserialize<Dictionary<string, LoreEntry>>(json);
             }
             catch
             {
-                // If the file does not exist or is malformed, fail safely
                 loreData = new Dictionary<string, LoreEntry>();
             }
         }
 
-        public static LoreEntry GetLore(string npcKey)
+        // --- NUEVO: Método para buscar por ID numérico ---
+        public static LoreEntry GetLore(int npcId)
         {
-            if (loreData != null && loreData.TryGetValue(npcKey, out var entry))
-                return entry;
+            string key = GetNPCKey(npcId); // Convertimos ID a "Mod/Nombre"
 
-            return LoreEntry.Default;
+            if (loreData != null && loreData.TryGetValue(key, out var entry))
+            {
+                return entry;
+            }
+
+            // Si no hay lore en el JSON, devolvemos uno genérico usando el nombre real del NPC
+            return new LoreEntry 
+            { 
+                title = Lang.GetNPCNameValue(npcId), // Nombre oficial de Terraria
+                lore = "Un nuevo habitante ha llegado." 
+            };
+        }
+
+        // Helper para convertir ID -> "Terraria/Merchant"
+        private static string GetNPCKey(int type)
+        {
+            ModNPC modNpc = ModContent.GetModNPC(type);
+            if (modNpc != null)
+                return $"{modNpc.Mod.Name}/{modNpc.Name}";
+
+            return $"Terraria/{NPCID.Search.GetName(type)}";
         }
     }
 
@@ -46,11 +60,8 @@ namespace NPCUnlockAnnouncer.Data
     {
         public string title { get; set; }
         public string lore { get; set; }
-
-        public static LoreEntry Default => new LoreEntry
-        {
-            title = "New NPC Unlocked",
-            lore = "A new ally has joined your world."
-        };
+        
+        // Propiedad estática por defecto eliminada para evitar confusiones, 
+        // usamos la generación dinámica arriba.
     }
 }

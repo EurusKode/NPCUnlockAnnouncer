@@ -1,10 +1,10 @@
 {
-  "Terraria/Mechanic": {
-    "title": "La Ingeniera",
-    "lore": "Una mente brillante liberada de las profundidades de la mazmorra."
+  "Terraria/Merchant": {
+    "title": "EL MERCADER",
+    "lore": "El amo de los negocios."
   },
-  "Terraria/Wizard": {
-    "title": "El Mago",
-    "lore": "Un hechicero olvidado, ahora libre para compartir su sabiduría."
+  "Terraria/Guide": {
+    "title": "EL GUÍA",
+    "lore": "Siempre útil, siempre el primero en caer."
   }
 }
