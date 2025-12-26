@@ -1,3 +1,4 @@
+using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -20,10 +21,10 @@ namespace NPCUnlockAnnouncer.CensusIntegration
             // Iterate through all NPC types (vanilla + modded)
             for (int npcType = 0; npcType < NPCLoader.NPCCount; npcType++)
             {
-                // Get default NPC instance
+                // Get default NPC instance (safe sample NPC)
                 NPC npc = ContentSamples.NpcsByNetId[npcType];
 
-                // Only Town NPCs
+                // Only Town NPCs can be unlocked
                 if (!npc.townNPC)
                     continue;
 
@@ -35,13 +36,26 @@ namespace NPCUnlockAnnouncer.CensusIntegration
                     continue;
 
                 // Ask Census if the NPC is unlocked
-                bool unlocked = (bool)census.Call("TownNPCUnlocked", npcType);
+                object result = census.Call("TownNPCUnlocked", npcType);
+
+                bool unlocked = false;
+
+                // Handle different possible return types from Census
+                if (result is bool boolResult)
+                {
+                    unlocked = boolResult;
+                }
+                else if (result is string stringResult)
+                {
+                    // Census often returns strings like "Unlocked"
+                    unlocked = stringResult.Equals("Unlocked", StringComparison.OrdinalIgnoreCase);
+                }
 
                 if (unlocked)
                 {
                     WorldUnlockData.MarkNPCUnlocked(npcKey);
 
-                    // UI will be triggered in the next step
+                    // UI / sound triggering is handled elsewhere
                 }
             }
         }
