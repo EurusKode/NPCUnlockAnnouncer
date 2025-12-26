@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
 using NPCUnlockAnnouncer.UI; 
-using NPCUnlockAnnouncer.Data; // Importante para LoreDatabase
+using NPCUnlockAnnouncer.Data;
 
 namespace NPCUnlockAnnouncer.Systems
 {
@@ -20,7 +20,6 @@ namespace NPCUnlockAnnouncer.Systems
 
         public override void PostUpdateNPCs()
         {
-            // Inicialización: Llenar lista con NPCs que ya estaban al entrar al mundo
             if (!_isInitialized)
             {
                 for (int i = 0; i < Main.maxNPCs; i++)
@@ -34,7 +33,6 @@ namespace NPCUnlockAnnouncer.Systems
                 return;
             }
 
-            // Detección en tiempo real
             for (int i = 0; i < Main.maxNPCs; i++)
             {
                 NPC npc = Main.npc[i];
@@ -49,16 +47,11 @@ namespace NPCUnlockAnnouncer.Systems
 
         private void TriggerUnlockAnimation(NPC npc)
         {
-            // 1. Obtenemos los datos del Lore usando el ID
-            LoreEntry datos = LoreDatabase.GetLore(npc.type);
+            var datos = LoreDatabase.GetLore(npc.type);
 
-            // 2. Llamamos al sistema de UI
-            // Nota: Usamos 'Instance' si lo definiste como static en NPCUnlockUISystem,
-            // o ModContent.GetInstance si no. Tu código actual usa Instance.
             if (NPCUnlockUISystem.Instance != null)
             {
-                // Pasamos ID, Título y Lore (Subtítulo)
-                NPCUnlockUISystem.Instance.ShowNPCUnlock(npc.type, datos.title, datos.lore);
+                NPCUnlockUISystem.Instance.ShowNPCUnlock(npc.type, datos.Title, datos.Subtitle);
             }
         }
     }

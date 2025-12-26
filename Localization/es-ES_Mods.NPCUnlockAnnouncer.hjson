@@ -1,0 +1,143 @@
+NPCTitles: {
+	Guide: {
+		Title: EL GUÍA
+		Subtitle: Siempre útil, siempre el primero en caer.
+	}
+
+	Merchant: {
+		Title: EL MERCADER
+		Subtitle: ¡Tiene las mejores ofertas... si tienes monedas!
+	}
+
+	Nurse: {
+		Title: LA ENFERMERA
+		Subtitle: Te curará cualquier herida, pero te costará caro.
+	}
+
+	Demolitionist: {
+		Title: EL DEMOLEDOR
+		Subtitle: ¡Es una explosión de personalidad!
+	}
+
+	DyeTrader: {
+		Title: EL TINTORERO
+		Subtitle: Trae color a tu vida aburrida.
+	}
+
+	Dryad: {
+		Title: LA DRÍADA
+		Subtitle: Protectora de la naturaleza y enemiga de la corrupción.
+	}
+
+	ArmsDealer: {
+		Title: EL TRAFICANTE
+		Subtitle: Mantén tus manos donde pueda verlas.
+	}
+
+	Stylist: {
+		Title: LA ESTILISTA
+		Subtitle: ¡Un nuevo corte para una nueva aventura!
+	}
+
+	Painter: {
+		Title: EL PINTOR
+		Subtitle: Pintando el mundo de un color a la vez.
+	}
+
+	Angler: {
+		Title: EL PESCADOR
+		Subtitle: Un maestro del anzuelo (y de las quejas).
+	}
+
+	GoblinTinkerer: {
+		Title: EL MANITAS DUENDE
+		Subtitle: Romperá tus accesorios... digo, los reforjará.
+	}
+
+	WitchDoctor: {
+		Title: EL MÉDICO BRUJO
+		Subtitle: Vudú, veneno y misterios de la selva.
+	}
+
+	Clothier: {
+		Title: EL BUHONERO
+		Subtitle: Hilos finos para héroes finos.
+	}
+
+	Mechanic: {
+		Title: LA MECÁNICA
+		Subtitle: Si tiene cables, ella puede arreglarlo.
+	}
+
+	PartyGirl: {
+		Title: LA CHICA DE FIESTA
+		Subtitle: ¡Es hora de celebrar! ¿Dónde está el confeti?
+	}
+
+	DD2Bartender: {
+		Title: EL TABERNERO
+		Subtitle: Cerveza fría y cuentos de Etheria.
+	}
+
+	Golfer: {
+		Title: EL GOLFISTA
+		Subtitle: Huyendo del desierto, directo al hoyo 18.
+	}
+
+	BestiaryGirl: {
+		Title: LA ZOÓLOGA
+		Subtitle: Ama a los animales... tal vez demasiado.
+	}
+
+	Wizard: {
+		Title: EL MAGO
+		Subtitle: ¡Magia arcana y bolas de cristal!
+	}
+
+	TaxCollector: {
+		Title: EL RECAUDADOR
+		Subtitle: La muerte y los impuestos son inevitables.
+	}
+
+	Truffle: {
+		Title: EL TRUFA
+		Subtitle: Es un tipo divertido (Fungi).
+	}
+
+	Pirate: {
+		Title: EL PIRATA
+		Subtitle: ¡Arrr! ¡Tesoro a la vista, grumete!
+	}
+
+	Steampunker: {
+		Title: LA STEAMPUNKER
+		Subtitle: Engranajes, vapor y ciencia victoriana.
+	}
+
+	Cyborg: {
+		Title: EL CYBORG
+		Subtitle: Mitad hombre, mitad máquina, 100% letal.
+	}
+
+	SantaClaus: {
+		Title: SANTA CLAUS
+		Subtitle: Jo, jo, jo. ¿Has sido bueno este año?
+	}
+
+	Princess: {
+		Title: LA PRINCESA
+		Subtitle: La realeza ha llegado a tu humilde morada.
+	}
+
+	TravellingMerchant: {
+		Title: MERCADER AMBULANTE
+		Subtitle: Mercancías exóticas de tierras lejanas.
+	}
+
+	SkeletonMerchant: {
+		Title: MERCADER ESQUELETO
+		Subtitle: Huesos y negocios en la oscuridad.
+	}
+
+	Default.Subtitle: Un nuevo aliado se une a la causa.
+}

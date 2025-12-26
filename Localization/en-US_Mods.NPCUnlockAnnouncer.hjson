@@ -1,2 +1,143 @@
-# This file will automatically update with entries for new content after a build and reload.
+NPCTitles: {
+	Guide: {
+		Title: THE GUIDE
+		Subtitle: Always helpful, always the first to die.
+	}
 
+	Merchant: {
+		Title: THE MERCHANT
+		Subtitle: He has the best deals... if you have the coin!
+	}
+
+	Nurse: {
+		Title: THE NURSE
+		Subtitle: She can heal anything for the right price.
+	}
+
+	Demolitionist: {
+		Title: THE DEMOLITIONIST
+		Subtitle: It's an explosion of personality!
+	}
+
+	DyeTrader: {
+		Title: THE DYE TRADER
+		Subtitle: Bringing color to your boring life.
+	}
+
+	Dryad: {
+		Title: THE DRYAD
+		Subtitle: Nature's protector and Corruption's enemy.
+	}
+
+	ArmsDealer: {
+		Title: THE ARMS DEALER
+		Subtitle: Keep your hands where I can see them.
+	}
+
+	Stylist: {
+		Title: THE STYLIST
+		Subtitle: A new cut for a new adventure!
+	}
+
+	Painter: {
+		Title: THE PAINTER
+		Subtitle: Painting the world one color at a time.
+	}
+
+	Angler: {
+		Title: THE ANGLER
+		Subtitle: A master of bait (and complaining).
+	}
+
+	GoblinTinkerer: {
+		Title: THE GOBLIN TINKERER
+		Subtitle: He'll break your gear... I mean, reforge it.
+	}
+
+	WitchDoctor: {
+		Title: THE WITCH DOCTOR
+		Subtitle: Voodoo, venom, and jungle mysteries.
+	}
+
+	Clothier: {
+		Title: THE CLOTHIER
+		Subtitle: Fine threads for fine heroes.
+	}
+
+	Mechanic: {
+		Title: THE MECHANIC
+		Subtitle: If it has wires, she can fix it.
+	}
+
+	PartyGirl: {
+		Title: THE PARTY GIRL
+		Subtitle: Time to celebrate! Where's the confetti?
+	}
+
+	DD2Bartender: {
+		Title: THE TAVERNKEEP
+		Subtitle: Cold ale and tales from Etheria.
+	}
+
+	Golfer: {
+		Title: THE GOLFER
+		Subtitle: Out of the sand trap, straight to hole 18.
+	}
+
+	BestiaryGirl: {
+		Title: THE ZOOLOGIST
+		Subtitle: She loves animals... maybe too much.
+	}
+
+	Wizard: {
+		Title: THE WIZARD
+		Subtitle: Arcane magic and crystal balls!
+	}
+
+	TaxCollector: {
+		Title: THE TAX COLLECTOR
+		Subtitle: Death and taxes are inevitable.
+	}
+
+	Truffle: {
+		Title: THE TRUFFLE
+		Subtitle: He's a fun guy.
+	}
+
+	Pirate: {
+		Title: THE PIRATE
+		Subtitle: Arrr! Treasure ahead, matey!
+	}
+
+	Steampunker: {
+		Title: THE STEAMPUNKER
+		Subtitle: Gears, steam, and Victorian science.
+	}
+
+	Cyborg: {
+		Title: THE CYBORG
+		Subtitle: Half man, half machine, 100% lethal.
+	}
+
+	SantaClaus: {
+		Title: SANTA CLAUS
+		Subtitle: Ho, ho, ho. Have you been good this year?
+	}
+
+	Princess: {
+		Title: THE PRINCESS
+		Subtitle: Royalty has arrived at your humble abode.
+	}
+
+	TravellingMerchant: {
+		Title: TRAVELLING MERCHANT
+		Subtitle: Exotic wares from faraway lands.
+	}
+
+	SkeletonMerchant: {
+		Title: SKELETON MERCHANT
+		Subtitle: Bones and business in the dark.
+	}
+
+	Default.Subtitle: A new ally has joined the cause.
+}
