@@ -19,6 +19,7 @@ namespace NPCUnlockAnnouncer.Systems
 
         public override void PostUpdateWorld()
         {
+            // Do nothing while in main menu
             if (Main.gameMenu)
                 return;
 
@@ -28,7 +29,7 @@ namespace NPCUnlockAnnouncer.Systems
             {
                 tickCounter = 0;
 
-
+                // Check Census for a newly unlocked NPC
                 var unlockResult = CensusUnlockProvider.CheckForNewUnlocks();
 
                 if (unlockResult.HasValue)
@@ -39,9 +40,8 @@ namespace NPCUnlockAnnouncer.Systems
                     // Get lore (or fallback)
                     LoreEntry lore = LoreDatabase.GetLore(npcKey);
 
-                    // Show UI notification
-                    NPCUnlockUISystem uiSystem = ModContent.GetInstance<NPCUnlockUISystem>();
-                    uiSystem.ShowNPCUnlock(
+                    // Use the UI singleton instance, not ModContent.GetInstance
+                    NPCUnlockUISystem.Instance?.ShowNPCUnlock(
                         npcType,
                         lore.title,
                         lore.lore
