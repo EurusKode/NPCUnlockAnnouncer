@@ -5,37 +5,37 @@ using NPCUnlockAnnouncer.CensusIntegration;
 namespace NPCUnlockAnnouncer.Systems
 {
     /// <summary>
-    /// Periodically checks for newly unlocked NPCs using Census.
+    /// Periodically checks Census to detect newly unlocked NPCs.
     /// </summary>
     public class UnlockDetectionSystem : ModSystem
     {
-        // How often we check for new unlocks (in ticks)
         // 60 ticks = 1 second
         private const int CheckInterval = 300; // 5 seconds
 
         private int tickCounter;
 
         /// <summary>
-        /// Called every game tick.
+        /// Runs after the world updates each tick.
         /// </summary>
         public override void PostUpdateWorld()
         {
-            // Do nothing if no world is loaded
-            if (!Main.gameMenu)
+            // Do not run logic while in the main menu
+            if (Main.gameMenu)
+                return;
+
+            tickCounter++;
+
+            if (tickCounter >= CheckInterval)
             {
-                tickCounter++;
+                tickCounter = 0;
 
-                if (tickCounter >= CheckInterval)
-                {
-                    tickCounter = 0;
-
-                    CensusUnlockProvider.CheckForNewUnlocks();
-                }
+                // Ask Census provider to check for new unlocks
+                CensusUnlockProvider.CheckForNewUnlocks();
             }
         }
 
         /// <summary>
-        /// Reset counter when entering a world.
+        /// Reset counter when a world is loaded.
         /// </summary>
         public override void OnWorldLoad()
         {
