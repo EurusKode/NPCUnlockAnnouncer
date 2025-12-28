@@ -16,6 +16,13 @@ This mod adds a stylish, RPG-style announcement banner whenever a Town NPC (or t
 [list]
 [*] English (US)
 [*] Español (ES)
+[*] Deutsch (DE)
+[*] Italiano (IT)
+[*] Français (FR)
+[*] Русский (RU)
+[*] 简体中文 (ZH-CN)
+[*] Português Brasileiro (PT-BR)
+[*] Polski (PL)
 [/list]
 
 [hr][/hr]
