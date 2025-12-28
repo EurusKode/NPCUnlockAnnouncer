@@ -1,2 +1,25 @@
-Adds stylish RPG-style banners whenever a Town NPC arrives. Includes custom subtitles and queue system.
-Añade carteles elegantes estilo RPG cuando llega un NPC al pueblo. Incluye subtítulos y sistema de cola.
+NPC Unlock Announcer
+--------------------
+
+Never miss a new villager again!
+This mod adds a stylish, RPG-style announcement banner whenever a Town NPC (or town pet) arrives in your world.
+
+Features:
+- Epic Announcements: A golden banner appears at the top of the screen.
+- Unique Subtitles: Every Vanilla NPC has a custom, witty subtitle.
+- Queue System: Multiple NPCs will appear one after another.
+- Languages: English & Spanish.
+
+--------------------
+
+Anunciador de NPCs
+--------------------
+
+¡Nunca más te pierdas la llegada de un aldeano!
+Este mod añade un elegante cartel tipo RPG cada vez que un NPC del pueblo (o mascota) llega a tu mundo.
+
+Características:
+- Anuncios Épicos: Un cartel dorado aparece con el ícono del NPC.
+- Subtítulos Únicos: Cada NPC tiene un subtítulo divertido.
+- Sistema de Cola: Los NPCs hacen fila si llegan varios a la vez.
+- Idiomas: Inglés y Español.
