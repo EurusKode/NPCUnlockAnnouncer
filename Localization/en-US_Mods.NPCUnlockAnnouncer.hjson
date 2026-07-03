@@ -139,5 +139,278 @@ NPCTitles: {
 		Subtitle: Night-time business.|Bones and RNG.|Deadly prices.|No skin in the game.|Literally shameless.
 	}
 
+	// --- CALAMITY MOD ---
+	SeaKing: {
+		Title: The Sea King
+		Subtitle: Ruler of the Sunken Sea.|Do you smell salt?|Amidias seeks refuge.
+	}
+
+	Bandit: {
+		Title: The Bandit
+		Subtitle: Hide your coins!|Sneaky arrival.|Better than a Goblin.
+	}
+
+	DrunkPrincess: {
+		Title: The Drunk Princess
+		Subtitle: Is this vodka?|Party hard!|Don't tell her father.
+	}
+
+	Archmage: {
+		Title: The Archmage
+		Subtitle: Permafrost is free.|Winter is coming.|Master of Cryogen.
+	}
+
+	Witch: {
+		Title: The Brimstone Witch
+		Subtitle: Seeking redemption.|No longer a boss.|Don't make her angry.
+	}
+
+	// --- ALCHEMIST NPC LITE ---
+	Alchemist: {
+		Title: The Alchemist
+		Subtitle: Potions for days.|Chemistry rules!|Better living through science.
+	}
+
+	Brewer: {
+		Title: The Brewer
+		Subtitle: Cheers!|This one is on the house.|Drink responsibly.
+	}
+
+	Jeweler: {
+		Title: The Jeweler
+		Subtitle: Shiny gems inside.|Bling bling.|Accessories for sale.
+	}
+
+	Architect: {
+		Title: The Architect
+		Subtitle: Building made easy.|Blocks galore!|Can we fix it? Yes we can!
+	}
+
+	Operator: {
+		Title: The Operator
+		Subtitle: Boss loot shop.|Eater of Materials.|Systems online.
+	}
+
+	Musician: {
+		Title: The Musician
+		Subtitle: Drop the beat.|Music box seller.|Symphony of the night.
+	}
+
+	Tinkerer: {
+		Title: The Tinkerer
+		Subtitle: Accessories expert.|I can fix that.|No refunds.
+	}
+
+	// --- THORIUM MOD ---
+	DesertTraveler: {
+		Title: The Desert Acolyte
+		Subtitle: Survivor of the sands.|Hero of the desert.|Cactus power!
+	}
+
+	Cook: {
+		Title: The Cook
+		Subtitle: Dinner is served.|Gourmet meals.|Don't play with your food.
+	}
+
+	Cobbler: {
+		Title: The Cobbler
+		Subtitle: Fancy shoes.|Running at the speed of sound.|Watch your step.
+	}
+
+	Diver: {
+		Title: The Diver
+		Subtitle: Under the sea.|Oxygen tanks included.|Deep blue secrets.
+	}
+
+	Blacksmith: {
+		Title: The Blacksmith
+		Subtitle: Hammer time.|The forge is hot.|Steel and fire.
+	}
+
+	ConfusedZombie: {
+		Title: The Confused Zombie
+		Subtitle: Brains? No, thanks.|Friendly undead.|He seems lost.
+	}
+
+	WeaponMaster: {
+		Title: The Weapon Master
+		Subtitle: Sharpen your blade.|Master of arms.|Combat training.
+	}
+
+	Spiritualist: {
+		Title: The Spiritualist
+		Subtitle: Spirits surround us.|Life and death.|Peaceful soul.
+	}
+
+	// --- MAGIC STORAGE ---
+	Automaton: {
+		Title: The Automaton
+		Subtitle: Storage simplified.|Digital inventory.|No more chests!
+	}
+
+	// --- FARGO'S MUTANT MOD ---
+	Mutant: {
+		Title: The Mutant
+		Subtitle: World breaker.|Do you want to suffer?|Boss rush time!
+	}
+
+	Abominationn: {
+		Title: The Abominationn
+		Subtitle: Event starter.|Chaos incoming.|Prepare for trouble.
+	}
+
+	Deviantt: {
+		Title: The Deviantt
+		Subtitle: Rare creatures help.|Pink and dangerous.|A helpful guide?
+	}
+
+	LumberJack: {
+		Title: The Lumberjack
+		Subtitle: Wood for days.|Tree chopper.|Deforestation expert.
+	}
+
 	Default.Subtitle: A new ally joins the cause.
+}
+
+Configs: {
+	AnnouncerConfig: {
+		DisplayName: Announcer Options
+
+		Headers: {
+			GeneralSettings: General Settings
+			CustomMessages: Custom NPC Messages
+		}
+
+		Style: {
+			Label: Notification Style
+			Tooltip: Classic: Black and gold frame. Modern: Neon glassmorphic frame. Corruption: Corruption theme. Crimson: Crimson theme. Wood: Wood theme. Jungle: Jungle theme.
+		}
+
+		Sound: {
+			Label: Announcement Sound
+			Tooltip: The sound played when an NPC unlock banner appears.
+		}
+
+		SoundVolume: {
+			Label: Sound Volume
+			Tooltip: Adjust the loudness of the announcement sound.
+		}
+
+		DurationSeconds: {
+			Label: Banner Duration (seconds)
+			Tooltip: How long the announcement banner remains visible on screen.
+		}
+
+		CustomNPCMessages: {
+			Label: Customize NPC Messages
+			Tooltip: Override the title and subtitle of any town NPC.
+		}
+	}
+
+	NPCMessageConfig: {
+		NPC: {
+			Label: NPC
+			Tooltip: The NPC to customize.
+		}
+
+		Title: {
+			Label: Custom Title
+			Tooltip: Custom Title for this NPC. Leave empty to use translation/default.
+		}
+
+		Subtitle: {
+			Label: Custom Subtitle
+			Tooltip: Custom Subtitle(s) for this NPC. You can separate multiple subtitles with '|' to randomly pick one. Leave empty to use translation/default.
+		}
+
+		Tooltip: ""
+	}
+
+	NotificationStyle: {
+		Tooltip: ""
+
+		Classic: {
+			Label: Classic
+			Tooltip: ""
+		}
+
+		Modern: {
+			Label: Modern
+			Tooltip: ""
+		}
+
+		Corruption: {
+			Label: Corruption
+			Tooltip: ""
+		}
+
+		Crimson: {
+			Label: Crimson
+			Tooltip: ""
+		}
+
+		Wood: {
+			Label: Wood
+			Tooltip: ""
+		}
+
+		Jungle: {
+			Label: Jungle
+			Tooltip: ""
+		}
+	}
+
+	SoundPreset: {
+		Tooltip: ""
+
+		None: {
+			Label: None
+			Tooltip: ""
+		}
+
+		MagicDing: {
+			Label: Magic Ding
+			Tooltip: ""
+		}
+
+		Coins: {
+			Label: Coins
+			Tooltip: ""
+		}
+
+		MaxMana: {
+			Label: Max Mana
+			Tooltip: ""
+		}
+
+		ResearchComplete: {
+			Label: Research Complete
+			Tooltip: ""
+		}
+
+		ChestUnlock: {
+			Label: Chest Unlock
+			Tooltip: ""
+		}
+
+		Crimson: {
+			Label: Crimson
+			Tooltip: ""
+		}
+
+		Knock: {
+			Label: Knock
+			Tooltip: ""
+		}
+
+		Jungle: {
+			Label: Jungle
+			Tooltip: ""
+		}
+
+		Corruption: {
+			Label: Corruption
+			Tooltip: ""
+		}
+	}
 }

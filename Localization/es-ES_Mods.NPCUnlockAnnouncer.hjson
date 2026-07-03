@@ -20,7 +20,7 @@ NPCTitles: {
 	}
 
 	DyeTrader: {
-		Title: EL TINTORERO
+		Title: EL VENDEDOR DE TINTES
 		Subtitle: El estilo también se farmea.|Color hoy, combinación dudosa mañana.|La moda es sufrimiento.|Teñir es un arte. A veces.|Nunca combina, pero siempre vende.
 	}
 
@@ -30,7 +30,7 @@ NPCTitles: {
 	}
 
 	ArmsDealer: {
-		Title: EL TRAFICANTE
+		Title: EL VENDEDOR DE ARMAS
 		Subtitle: La paz nunca fue una opción.|Armas legales… probablemente.|Dispara primero, pregunta después.|Munición para todo problema.|Sonríe como villano de película.
 	}
 
@@ -50,7 +50,7 @@ NPCTitles: {
 	}
 
 	GoblinTinkerer: {
-		Title: EL MANITAS DUENDE
+		Title: EL DUENDE CHAPUCERO
 		Subtitle: Reforja hoy, llora mañana.|El azar es parte del encanto.|Romper también cuenta como mejorar.|Confía en mí. No deberías.|Tu accesorio ya no es el mismo.
 	}
 
@@ -60,7 +60,7 @@ NPCTitles: {
 	}
 
 	Clothier: {
-		Title: EL BUHONERO
+		Title: EL SASTRE
 		Subtitle: Elegante, maldito y bien vestido.|La moda nunca muere. Tú sí.|Trajes con historia oscura.|Costura con trauma incluido.|El pasado lo sigue.
 	}
 
@@ -70,7 +70,7 @@ NPCTitles: {
 	}
 
 	PartyGirl: {
-		Title: LA CHICA DE FIESTA
+		Title: LA CHICA FIESTERA
 		Subtitle: Confeti antes que lógica.|Todo es mejor con globos.|Fiesta incluso en el apocalipsis.|Nunca se cansa. Nunca.|Peligro nivel: divertido.
 	}
 
@@ -86,7 +86,7 @@ NPCTitles: {
 
 	BestiaryGirl: {
 		Title: LA ZOÓLOGA
-		Subtitle: Amor animal en exceso.|Quiere tocarlos todos.|Investigación muy led.|Demasiado entusiasmo.|Ciencia con abrazos.
+		Subtitle: Amor animal en exceso.|Quiere tocarlos todos.|Investigación muy de cerca.|Demasiado entusiasmo.|Ciencia con abrazos.
 	}
 
 	Wizard: {
@@ -95,12 +95,12 @@ NPCTitles: {
 	}
 
 	TaxCollector: {
-		Title: EL RECAUDADOR
+		Title: EL RECAUDADOR DE IMPUESTOS
 		Subtitle: El infierno cobra intereses.|La muerte no lo detuvo.|Impuestos eternos.|No negocia.|El más temido.
 	}
 
 	Truffle: {
-		Title: EL TRUFA
+		Title: TRUFA
 		Subtitle: Hongo con personalidad.|Demasiado chill para este mundo.|Vive, ríe, esporas.|No es comida.|Vibra fungi.
 	}
 
@@ -139,5 +139,278 @@ NPCTitles: {
 		Subtitle: Negocios nocturnos.|Huesos y azar.|Precios mortales.|No tiene piel en el juego.|Literalmente sin escrúpulos.
 	}
 
+	// --- CALAMITY MOD ---
+	SeaKing: {
+		Title: El Rey del Mar
+		Subtitle: Gobernante del Mar Hundido.|¿Hueles a sal?|Amidias busca refugio.
+	}
+
+	Bandit: {
+		Title: El Bandido
+		Subtitle: ¡Esconde tus monedas!|Llegada sigilosa.|Mejor que el Duende Chapucero.
+	}
+
+	DrunkPrincess: {
+		Title: La Princesa Ebria
+		Subtitle: ¿Eso es vodka?|¡Fiesta dura!|No se lo digas a su padre.
+	}
+
+	Archmage: {
+		Title: El Archimago
+		Subtitle: Permafrost es libre.|Se acerca el invierno.|Maestro de Cryogen.
+	}
+
+	Witch: {
+		Title: La Bruja de Azufre
+		Subtitle: Buscando redención.|Ya no es un jefe.|No la hagas enojar.
+	}
+
+	// --- ALCHEMIST NPC LITE ---
+	Alchemist: {
+		Title: El Alquimista
+		Subtitle: Pociones a montones.|¡Viva la química!|Vida mejor gracias a la ciencia.
+	}
+
+	Brewer: {
+		Title: La Cervecera
+		Subtitle: ¡Salud!|Esta ronda va por la casa.|Bebe con responsabilidad.
+	}
+
+	Jeweler: {
+		Title: El Joyero
+		Subtitle: Gemas brillantes dentro.|Bling bling.|Accesorios a la venta.
+	}
+
+	Architect: {
+		Title: El Arquitecto
+		Subtitle: Construcción fácil.|¡Bloques por doquier!|¿Podemos hacerlo? ¡Sí podemos!
+	}
+
+	Operator: {
+		Title: La Operadora
+		Subtitle: Tienda de botín de jefes.|Devoradora de Materiales.|Sistemas en línea.
+	}
+
+	Musician: {
+		Title: El Músico
+		Subtitle: Sube el ritmo.|Vendedor de cajas de música.|Sinfonía de la noche.
+	}
+
+	Tinkerer: {
+		Title: El Artesano
+		Subtitle: Experto en accesorios.|Yo puedo arreglar eso.|Sin devoluciones.
+	}
+
+	// --- THORIUM MOD ---
+	DesertTraveler: {
+		Title: El Acólito del Desierto
+		Subtitle: Sobreviviente de las arenas.|Héroe del desierto.|¡Poder de cactus!
+	}
+
+	Cook: {
+		Title: El Cocinero
+		Subtitle: La cena está servida.|Comidas gourmet.|No juegues con tu comida.
+	}
+
+	Cobbler: {
+		Title: El Zapatero
+		Subtitle: Zapatos elegantes.|Corriendo a la velocidad del sonido.|Cuidado donde pisas.
+	}
+
+	Diver: {
+		Title: El Buzo
+		Subtitle: Bajo el mar.|Tanques de oxígeno incluidos.|Secretos del azul profundo.
+	}
+
+	Blacksmith: {
+		Title: El Herrero
+		Subtitle: Hora del martillo.|La forja está caliente.|Acero y fuego.
+	}
+
+	ConfusedZombie: {
+		Title: El Zombi Confundido
+		Subtitle: ¿Cerebros? No, gracias.|No-muerto amigable.|Parece perdido.
+	}
+
+	WeaponMaster: {
+		Title: El Maestro de Armas
+		Subtitle: Afila tu hoja.|Maestro de las armas.|Entrenamiento de combate.
+	}
+
+	Spiritualist: {
+		Title: La Espiritista
+		Subtitle: Los espíritus nos rodean.|Vida y muerte.|Alma pacífica.
+	}
+
+	// --- MAGIC STORAGE ---
+	Automaton: {
+		Title: El Autómata
+		Subtitle: Almacenamiento simplificado.|Inventario digital.|¡No más cofres!
+	}
+
+	// --- FARGO'S MUTANT MOD ---
+	Mutant: {
+		Title: El Mutante
+		Subtitle: Destructor de mundos.|¿Quieres sufrir?|¡Hora del Boss Rush!
+	}
+
+	Abominationn: {
+		Title: El Abominación
+		Subtitle: Iniciador de eventos.|Caos entrante.|Prepárate para los problemas.
+	}
+
+	Deviantt: {
+		Title: La Deviantt
+		Subtitle: Ayuda con criaturas raras.|Rosa y peligrosa.|¿Una guía útil?
+	}
+
+	LumberJack: {
+		Title: El Leñador
+		Subtitle: Madera de sobra.|Talador de árboles.|Experto en deforestación.
+	}
+
 	Default.Subtitle: Un nuevo aliado se une a la causa.
+}
+
+Configs: {
+	AnnouncerConfig: {
+		DisplayName: Opciones del Anunciador
+
+		Headers: {
+			GeneralSettings: Ajustes Generales
+			CustomMessages: Mensajes Personalizados de NPC
+		}
+
+		Style: {
+			Label: Estilo del Cuadro de Notificación
+			Tooltip: Classic: Cuadro tradicional negro y dorado. Modern: Cuadro neon glassmorphism animado. Corruption: Tema Corrupción. Crimson: Tema Carmesí. Wood: Tema Madera. Jungle: Tema Selva.
+		}
+
+		Sound: {
+			Label: Sonido de Anuncio
+			Tooltip: El sonido que se reproduce cuando aparece la notificación de un NPC desbloqueado.
+		}
+
+		SoundVolume: {
+			Label: Volumen del Sonido
+			Tooltip: Ajusta el volumen del sonido de anuncio.
+		}
+
+		DurationSeconds: {
+			Label: Duración de Notificación (segundos)
+			Tooltip: Tiempo que permanece visible la notificación en pantalla.
+		}
+
+		CustomNPCMessages: {
+			Label: Personalizar Mensajes de NPC
+			Tooltip: Sobrescribe el título y subtítulo de cualquier NPC del pueblo.
+		}
+	}
+
+	NPCMessageConfig: {
+		NPC: {
+			Label: NPC
+			Tooltip: El NPC a personalizar.
+		}
+
+		Title: {
+			Label: Título Personalizado
+			Tooltip: Título personalizado para este NPC. Déjalo en blanco para usar la traducción o el valor por defecto.
+		}
+
+		Subtitle: {
+			Label: Subtítulo Personalizado
+			Tooltip: Subtítulo(s) personalizado(s) para este NPC. Puedes separar varios subtítulos con '|' para que se elija uno al azar. Déjalo en blanco para usar la traducción o el valor por defecto.
+		}
+
+		// Tooltip: ""
+	}
+
+	NotificationStyle: {
+		// Tooltip: ""
+
+		Classic: {
+			// Label: Classic
+			// Tooltip: ""
+		}
+
+		Modern: {
+			// Label: Modern
+			// Tooltip: ""
+		}
+
+		Corruption: {
+			// Label: Corruption
+			// Tooltip: ""
+		}
+
+		Crimson: {
+			// Label: Crimson
+			// Tooltip: ""
+		}
+
+		Wood: {
+			// Label: Wood
+			// Tooltip: ""
+		}
+
+		Jungle: {
+			// Label: Jungle
+			// Tooltip: ""
+		}
+	}
+
+	SoundPreset: {
+		// Tooltip: ""
+
+		None: {
+			// Label: None
+			// Tooltip: ""
+		}
+
+		MagicDing: {
+			// Label: Magic Ding
+			// Tooltip: ""
+		}
+
+		Coins: {
+			// Label: Coins
+			// Tooltip: ""
+		}
+
+		MaxMana: {
+			// Label: Max Mana
+			// Tooltip: ""
+		}
+
+		ResearchComplete: {
+			// Label: Research Complete
+			// Tooltip: ""
+		}
+
+		ChestUnlock: {
+			// Label: Chest Unlock
+			// Tooltip: ""
+		}
+
+		Crimson: {
+			// Label: Crimson
+			// Tooltip: ""
+		}
+
+		Knock: {
+			// Label: Knock
+			// Tooltip: ""
+		}
+
+		Jungle: {
+			// Label: Jungle
+			// Tooltip: ""
+		}
+
+		Corruption: {
+			// Label: Corruption
+			// Tooltip: ""
+		}
+	}
 }

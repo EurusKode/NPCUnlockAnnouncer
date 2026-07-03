@@ -1,25 +1,33 @@
 NPC Unlock Announcer
 --------------------
-
 Never miss a new villager again!
-This mod adds a stylish, RPG-style announcement banner whenever a Town NPC (or town pet) arrives in your world.
+This mod adds a premium, RPG-style announcement banner whenever a Town NPC (or town pet) arrives in your world.
 
 Features:
-- Epic Announcements: A golden banner appears at the top of the screen.
-- Unique Subtitles: Every Vanilla NPC has a custom, witty subtitle.
-- Queue System: Multiple NPCs will appear one after another.
-- Languages: English & Spanish.
+- Visual Themes: Classic (black & gold), Modern (animated neon glassmorphism), Crimson, Wood, and Jungle.
+- Audio Presets: Choose from multiple built-in sounds (Magic Ding, Coins, Max Mana, and theme-specific sounds) with adjustable volume and banner duration.
+- Custom Subtitles: Witty, unique descriptions for every vanilla NPC.
+- Mod Compatibility: Fully compatible with Calamity, Thorium, AlchemistNPC, Magic Storage, Fargo's, and integrates with Census.
+
+Languages:
+- English
+- Español 
+*Note: Other languages (DE, IT, FR, RU, ZH-CN, PT-BR, PL) are available but have not went through revision.
 
 --------------------
 
-Anunciador de NPCs
+NPC Unlock Announcer
 --------------------
-
 ¡Nunca más te pierdas la llegada de un aldeano!
-Este mod añade un elegante cartel tipo RPG cada vez que un NPC del pueblo (o mascota) llega a tu mundo.
+Este mod añade un elegante banner estilo RPG cada vez que un NPC del pueblo (o mascota) llega a tu mundo.
 
 Características:
-- Anuncios Épicos: Un cartel dorado aparece con el ícono del NPC.
-- Subtítulos Únicos: Cada NPC tiene un subtítulo divertido.
-- Sistema de Cola: Los NPCs hacen fila si llegan varios a la vez.
-- Idiomas: Inglés y Español.
+- Temas: Clásico (negro y dorado), Moderno (neón animado), Carmesí, Madera y Selva.
+- Ajustes de Sonido: Sonidos variados con volumen y duración configurables.
+- Subtítulos Únicos: Frases únicas para cada NPC de Terraria.
+- Compatible con Mods y Census: Soporte integrado para Calamity, Thorium, AlchemistNPC, Magic Storage, Fargo's y más.
+
+Idiomas:
+- Inglés 
+- Español 
+*Nota: Otros idiomas están disponibles pero no han sido revisados aún.

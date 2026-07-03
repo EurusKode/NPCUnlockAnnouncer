@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using NPCUnlockAnnouncer.Systems;
 
 namespace NPCUnlockAnnouncer.UI
 {
@@ -15,7 +16,7 @@ namespace NPCUnlockAnnouncer.UI
         public BannerState State { get; private set; } = BannerState.Hidden;
 
         private const int EnterDuration = 20;
-        private const int ShowDuration = 300;
+        private int ShowDuration => (AnnouncerConfig.Instance?.DurationSeconds ?? 5) * 60;
         private const int ExitDuration = 20;
 
         private int timer;

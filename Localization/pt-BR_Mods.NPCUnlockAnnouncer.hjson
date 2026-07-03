@@ -139,5 +139,278 @@ NPCTitles: {
 		Subtitle: Negócios noturnos.|Ossos e aleatoriedade.|Preços mortais.|Sem pele em jogo.|Literalmente sem vergonha.
 	}
 
+	// --- CALAMITY MOD ---
+	SeaKing: {
+		Title: O Rei do Mar
+		Subtitle: Governante do Mar Submerso.|Sente o cheiro de sal?|Amidias busca refúgio.
+	}
+
+	Bandit: {
+		Title: O Bandido
+		Subtitle: Escondam suas moedas!|Chegada furtiva.|Melhor que um Goblin.
+	}
+
+	DrunkPrincess: {
+		Title: A Princesa Bêbada
+		Subtitle: Isso é vodka?|Festa duro!|Não conte ao pai dela.
+	}
+
+	Archmage: {
+		Title: O Arquimago
+		Subtitle: Permafrost está livre.|O inverno está chegando.|Mestre do Cryogen.
+	}
+
+	Witch: {
+		Title: A Bruxa de Enxofre
+		Subtitle: Buscando redenção.|Não é mais um chefe.|Não a deixe irritada.
+	}
+
+	// --- ALCHEMIST NPC LITE ---
+	Alchemist: {
+		Title: O Alquimista
+		Subtitle: Poções aos montes.|Viva a química!|Vida melhor através da ciência.
+	}
+
+	Brewer: {
+		Title: A Cervejeira
+		Subtitle: Saúde!|Essa é por conta da casa.|Beba com responsabilidade.
+	}
+
+	Jeweler: {
+		Title: O Joalheiro
+		Subtitle: Gemas brilhantes.|Bling bling.|Acessórios à venda.
+	}
+
+	Architect: {
+		Title: O Arquiteto
+		Subtitle: Construção facilitada.|Blocos pra todo lado!|Podemos consertar? Sim, nós podemos!
+	}
+
+	Operator: {
+		Title: A Operadora
+		Subtitle: Loja de espólios de chefes.|Devoradora de Materiais.|Sistemas online.
+	}
+
+	Musician: {
+		Title: O Músico
+		Subtitle: Solta o som.|Vendedor de caixas de música.|Sinfonia da noite.
+	}
+
+	Tinkerer: {
+		Title: O Inventor
+		Subtitle: Expert em acessórios.|Eu posso consertar isso.|Sem devoluções.
+	}
+
+	// --- THORIUM MOD ---
+	DesertTraveler: {
+		Title: O Acólito do Deserto
+		Subtitle: Sobrevivente das areias.|Herói do deserto.|Poder do cacto!
+	}
+
+	Cook: {
+		Title: O Cozinheiro
+		Subtitle: O jantar está servido.|Refeições gourmet.|Não brinque com a comida.
+	}
+
+	Cobbler: {
+		Title: O Sapateiro
+		Subtitle: Sapatos chiques.|Correndo na velocidade do som.|Olhe por onde pisa.
+	}
+
+	Diver: {
+		Title: O Mergulhador
+		Subtitle: No fundo do mar.|Tanques de oxigênio inclusos.|Segredos do azul profundo.
+	}
+
+	Blacksmith: {
+		Title: O Ferreiro
+		Subtitle: Hora do martelo.|A forja está quente.|Aço e fogo.
+	}
+
+	ConfusedZombie: {
+		Title: O Zumbi Confuso
+		Subtitle: Cérebros? Não, obrigado.|Morto-vivo amigável.|Ele parece perdido.
+	}
+
+	WeaponMaster: {
+		Title: O Mestre de Armas
+		Subtitle: Afie sua lâmina.|Mestre das armas.|Treino de combate.
+	}
+
+	Spiritualist: {
+		Title: A Espiritualista
+		Subtitle: Espíritos nos cercam.|Vida e morte.|Alma pacífica.
+	}
+
+	// --- MAGIC STORAGE ---
+	Automaton: {
+		Title: O Autômato
+		Subtitle: Armazenamento simplificado.|Inventário digital.|Chega de baús!
+	}
+
+	// --- FARGO'S MUTANT MOD ---
+	Mutant: {
+		Title: O Mutante
+		Subtitle: Destruidor de mundos.|Quer sofrer?|Hora do Boss Rush!
+	}
+
+	Abominationn: {
+		Title: A Abominação
+		Subtitle: Iniciador de eventos.|Caos a caminho.|Prepare-se para problemas.
+	}
+
+	Deviantt: {
+		Title: A Deviantt
+		Subtitle: Ajuda com criaturas raras.|Rosa e perigosa.|Um guia útil?
+	}
+
+	LumberJack: {
+		Title: O Lenhador
+		Subtitle: Madeira de sobra.|Cortador de árvores.|Expert em desmatamento.
+	}
+
 	Default.Subtitle: Um novo aliado se junta à causa.
+}
+
+Configs: {
+	AnnouncerConfig: {
+		// DisplayName: Announcer Options
+
+		Headers: {
+			// GeneralSettings: General Settings
+			// CustomMessages: Custom NPC Messages
+		}
+
+		Style: {
+			// Label: Notification Style
+			// Tooltip: Classic: Black and gold frame. Modern: Neon glassmorphic frame. Corruption: Corruption theme. Crimson: Crimson theme. Wood: Wood theme. Jungle: Jungle theme.
+		}
+
+		Sound: {
+			// Label: Announcement Sound
+			// Tooltip: The sound played when an NPC unlock banner appears.
+		}
+
+		SoundVolume: {
+			// Label: Sound Volume
+			// Tooltip: Adjust the loudness of the announcement sound.
+		}
+
+		DurationSeconds: {
+			// Label: Banner Duration (seconds)
+			// Tooltip: How long the announcement banner remains visible on screen.
+		}
+
+		CustomNPCMessages: {
+			// Label: Customize NPC Messages
+			// Tooltip: Override the title and subtitle of any town NPC.
+		}
+	}
+
+	NPCMessageConfig: {
+		NPC: {
+			// Label: NPC
+			// Tooltip: The NPC to customize.
+		}
+
+		Title: {
+			// Label: Custom Title
+			// Tooltip: Custom Title for this NPC. Leave empty to use translation/default.
+		}
+
+		Subtitle: {
+			// Label: Custom Subtitle
+			// Tooltip: Custom Subtitle(s) for this NPC. You can separate multiple subtitles with '|' to randomly pick one. Leave empty to use translation/default.
+		}
+
+		// Tooltip: ""
+	}
+
+	NotificationStyle: {
+		// Tooltip: ""
+
+		Classic: {
+			// Label: Classic
+			// Tooltip: ""
+		}
+
+		Modern: {
+			// Label: Modern
+			// Tooltip: ""
+		}
+
+		Corruption: {
+			// Label: Corruption
+			// Tooltip: ""
+		}
+
+		Crimson: {
+			// Label: Crimson
+			// Tooltip: ""
+		}
+
+		Wood: {
+			// Label: Wood
+			// Tooltip: ""
+		}
+
+		Jungle: {
+			// Label: Jungle
+			// Tooltip: ""
+		}
+	}
+
+	SoundPreset: {
+		// Tooltip: ""
+
+		None: {
+			// Label: None
+			// Tooltip: ""
+		}
+
+		MagicDing: {
+			// Label: Magic Ding
+			// Tooltip: ""
+		}
+
+		Coins: {
+			// Label: Coins
+			// Tooltip: ""
+		}
+
+		MaxMana: {
+			// Label: Max Mana
+			// Tooltip: ""
+		}
+
+		ResearchComplete: {
+			// Label: Research Complete
+			// Tooltip: ""
+		}
+
+		ChestUnlock: {
+			// Label: Chest Unlock
+			// Tooltip: ""
+		}
+
+		Crimson: {
+			// Label: Crimson
+			// Tooltip: ""
+		}
+
+		Knock: {
+			// Label: Knock
+			// Tooltip: ""
+		}
+
+		Jungle: {
+			// Label: Jungle
+			// Tooltip: ""
+		}
+
+		Corruption: {
+			// Label: Corruption
+			// Tooltip: ""
+		}
+	}
 }

@@ -2,43 +2,48 @@
 [b]Never miss a new villager again![/b]
 
 Did the Merchant arrive while you were fighting a boss? Did you miss the chat message? Not anymore!
-This mod adds a stylish, RPG-style announcement banner whenever a Town NPC (or town pet) arrives in your world.
+NPC Unlock Announcer adds a premium, RPG-style announcement banner whenever a Town NPC, town pet, or modded villager arrives in your world.
 
-[h2]Features[/h2]
+[h2] Features[/h2]
 [list]
-[*] [b]Stylish Announcements:[/b] A golden banner appears at the top of the screen with the NPC's icon.
-[*] [b]Unique Subtitles:[/b] Every Vanilla NPC has a custom, witty subtitle (English & Spanish).
-[*] [b]Mod Compatibility:[/b] Works with modded NPCs (displays a generic "New Ally" message or uses their name).
-[*] [b]Visuals:[/b] Clean, vanilla-friendly UI that fits perfectly with Terraria's aesthetic.
+[*] [b]Visual Themes:[/b] Choose from multiple gorgeous notification styles:
+  - [b]Classic:[/b] Terraria-style black and gold frame.
+  - [b]Modern:[/b] Electric neon glassmorphic frame with animated borders.
+  - [b]Crimson, Wood, & Jungle:[/b] Detailed biome-specific borders that fit right into Terraria.
+[*] [b]Sound Presets & Volume Control:[/b] Customize the unlock sound with options like Magic Ding, Coins, Max Mana, and new custom sounds (Crimson, Knock, Jungle, and Corruption). Fully adjustable volume and duration.
+[*] [b]Seamless Mod Compat & Census integration:[/b] Fully compatible with major mods like Calamity, Thorium, AlchemistNPC, Magic Storage, Fargo's, and more. Integrates directly with the Census mod.
 [/list]
 
-[h2]🌎 Languages[/h2]
+[h2] Languages[/h2]
 [list]
-[*] English (US)
-[*] Español (ES)
-[*] Deutsch (DE)
-[*] Italiano (IT)
-[*] Français (FR)
-[*] Русский (RU)
-[*] 简体中文 (ZH-CN)
-[*] Português Brasileiro (PT-BR)
-[*] Polski (PL)
+[*] [b]English[/b] 
+[*] [b]Español[/b] 
+[*] [i]*Note: Other languages (Deutsch, Italiano, Français, Русский, 简体中文, Português, Polski) are available but have not gone through revision yet.*[/i]
 [/list]
 
 [hr][/hr]
 
-[h1]Alerta de NPCs (NPC Unlock Announcer)[/h1]
+[h1]Anunciador de NPCs (NPC Unlock Announcer)[/h1]
 [b]¡Nunca más te pierdas la llegada de un aldeano![/b]
 
 ¿Llegó el Mercader mientras peleabas con un jefe? ¿Se te pasó el mensaje en el chat? ¡Ya no más!
-Este mod añade un elegante cartel tipo RPG cada vez que un NPC del pueblo (o mascota) llega a tu mundo.
+Este mod añade un elegante cartel tipo RPG cada vez que un NPC del pueblo, mascota o aldeano de otro mod llega a tu mundo.
 
-[h2]Características[/h2]
+[h2] Características[/h2]
 [list]
-[*] [b]Anuncios Elegantes:[/b] Un cartel dorado aparece en la parte superior con el ícono del NPC.
-[*] [b]Subtítulos Únicos:[/b] Cada NPC original tiene un título y subtítulo divertido y personalizado.
-[*] [b]Compatible con Mods:[/b] Funciona con NPCs de otros mods (mostrando un mensaje genérico de bienvenida).
-[*] [b]Estilo Visual:[/b] Una interfaz limpia que encaja perfectamente con la estética de Terraria.
+[*] [b]Temas Visuales:[/b] Elige entre varios estilos de marcos llamativos:
+  - [b]Classic:[/b] Marco tradicional negro y dorado al estilo Terraria.
+  - [b]Modern:[/b] Panel estilo glassmorphic de neón eléctrico con bordes animados.
+  - [b]Carmesí, Madera y Selva:[/b] Marcos temáticos detallados que encajan perfectamente con cada bioma.
+[*] [b]Ajustes de Sonido:[/b] Personaliza el sonido de anuncio (Magic Ding, Monedas, Maná Máximo, Cofre Desbloqueado y sonidos temáticos de Carmesí, Golpe, Selva y Corrupción) con volumen y duración ajustables.
+[*] [b]Compatibilidad con Mods y Census:[/b] Soporte completo para Calamity, Thorium, AlchemistNPC, Magic Storage, Fargo's y más, con integración nativa para Census.
+[/list]
+
+[h2] Idiomas[/h2]
+[list]
+[*] [b]English[/b] 
+[*] [b]Español[/b] 
+[*] [i]*Nota: Los demás idiomas (Alemán, Italiano, Francés, Ruso, Chino, Portugués, Polaco) están disponibles por traducción automática pero aún no han sido revisados.*[/i]
 [/list]
 
 [i]Developed for tModLoader 1.4.4+[/i]
